@@ -32,5 +32,6 @@ namespace VideoSharing.Data.Data.Models
         public string UpdatedBy { get; set; }
 
         public virtual ICollection<Video> Videos { get; set; }
+        public virtual ICollection<VideoComment> VideoComments { get; set; }
     }
 }

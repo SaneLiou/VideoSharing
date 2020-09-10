@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VideoSharing.Data.Context;
 
 namespace VideoSharing.Data.Migrations
 {
     [DbContext(typeof(VideoSharingContext))]
-    partial class VideoSharingContextModelSnapshot : ModelSnapshot
+    [Migration("20200910155033_Add_New_Class")]
+    partial class Add_New_Class
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

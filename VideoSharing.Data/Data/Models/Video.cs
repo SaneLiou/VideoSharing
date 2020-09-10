@@ -10,7 +10,7 @@ namespace VideoSharing.Data.Data.Models
         [Required]
         [StringLength(50)]
         public string VideoTitle { get; set; }
-        [Required]
+        
         public int UserId {get; set; }
         public virtual User User { get; set; }
         [Required]
@@ -26,5 +26,7 @@ namespace VideoSharing.Data.Data.Models
         public DateTime UpdatedTime { get; set; }
         public string CreatedBy { get; set; }
         public string UpdatedBy { get; set; }
+
+        public virtual ICollection<VideoComment> VideoComments { get; set; }
     }
 }
