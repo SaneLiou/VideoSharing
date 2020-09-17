@@ -7,7 +7,16 @@ namespace VideoSharing.Data.Data.Models
 {
     public class VideoComment : IEntity
     {
-        public int Id { get; set; }
+        public VideoComment(string body)
+        {
+            this.Body = body;
+
+            this.CreatedTime = DateTime.Now;
+            this.UpdatedTime = DateTime.Now;
+            this.CreatedBy = "Initialised Data";
+            this.UpdatedBy = "Initialised Data";
+        }
+        public string Id { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime UpdatedTime { get; set; }
         public string CreatedBy { get; set; }

@@ -8,7 +8,7 @@ namespace VideoSharing.Data.Data.Models
     interface IEntity
     {
         [Required]
-        public int Id { get; set; }
+        public string Id { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime UpdatedTime { get; set; }
 

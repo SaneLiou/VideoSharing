@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VideoSharing.Data\VideoSharing.Data.csproj" />
+    <ProjectReference Include="..\VideoSharing.Repository\VideoSharing.Repository.csproj" />
   </ItemGroup>
 
 

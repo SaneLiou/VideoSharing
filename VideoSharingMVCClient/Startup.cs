@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using VideoSharing.Data;
+using VideoSharing.Repository;
 
 namespace VideoSharingMVCClient
 {
@@ -26,6 +27,8 @@ namespace VideoSharingMVCClient
         {
             services.AddControllersWithViews();
             services.RegisterDataServices(Configuration);
+            services.AddIdentityToProject();
+            services.ConfigureRepositoryWrapper();
 
         }
 

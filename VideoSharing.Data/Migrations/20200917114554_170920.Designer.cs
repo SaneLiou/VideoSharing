@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VideoSharing.Data.Context;
 
 namespace VideoSharing.Data.Migrations
 {
     [DbContext(typeof(VideoSharingContext))]
-    partial class VideoSharingContextModelSnapshot : ModelSnapshot
+    [Migration("20200917114554_170920")]
+    partial class _170920
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,29 +46,6 @@ namespace VideoSharing.Data.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "67b50161-5a2b-4a87-bb68-5d8183e985e8",
-                            ConcurrencyStamp = "0731d13a-720e-41a6-96f8-f2b48007e149",
-                            Name = "Visitor",
-                            NormalizedName = "VISITOR"
-                        },
-                        new
-                        {
-                            Id = "e3e5f9c6-cc17-4637-be25-d3bb4ae45123",
-                            ConcurrencyStamp = "5ceb1921-20db-4744-9a8a-caa790e96999",
-                            Name = "RegisteredUser",
-                            NormalizedName = "REGISTEREDUSER"
-                        },
-                        new
-                        {
-                            Id = "85fb27b0-52b3-4852-b91d-782a821dafe8",
-                            ConcurrencyStamp = "97e723f8-1560-4554-bc99-63bd434d930a",
-                            Name = "Administration",
-                            NormalizedName = "ADMINISTRATION"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

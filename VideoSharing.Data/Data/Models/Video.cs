@@ -7,6 +7,17 @@ namespace VideoSharing.Data.Data.Models
 {
     public class Video:IEntity
     {
+        public Video(string videoTitle,string address, string description)
+        {
+            this.VideoTitle = videoTitle;
+            this.Address = address;
+            this.Description = description;
+            
+            this.CreatedTime = DateTime.Now;
+            this.UpdatedTime = DateTime.Now;
+            this.CreatedBy = "Initialised Data";
+            this.UpdatedBy = "Initialised Data";
+        }
         [Required]
         [StringLength(50)]
         public string VideoTitle { get; set; }
@@ -21,7 +32,7 @@ namespace VideoSharing.Data.Data.Models
         public int Upvote_Count { get; set; }
 
         public int Downvote_Count { get; set; }
-        public int Id { get; set; }
+        public string Id { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime UpdatedTime { get; set; }
         public string CreatedBy { get; set; }
